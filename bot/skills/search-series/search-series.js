@@ -1,4 +1,5 @@
 import striptags from 'striptags'
+import Request from 'newbot/functions/request'
 import formats from 'newbot-formats'
 import code from './search-series.converse'
 
@@ -23,6 +24,7 @@ export default {
                     }]
                 }
             })
-        }
+        },
+        Request
     }
 }
