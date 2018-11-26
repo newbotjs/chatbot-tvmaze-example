@@ -1,0 +1,16 @@
+@Intent('natural.intent.search')
+search() {
+
+    if (not :intent.title.found) {
+         > Ok, what is the name of the series?
+        Prompt()
+        Request('http://api.tvmaze.com/search/shows?q={ :text }')
+        series = :response.data
+    }
+    else {
+        series = :intent.title.value
+    }
+
+    @Format('carousel', searchSeries(series))
+    > I found
+}

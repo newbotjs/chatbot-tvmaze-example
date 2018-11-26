@@ -1,0 +1,5 @@
+@Event('start')
+start() {
+    @Format('quickReplies', ['search series'])
+    > Welcome, I am TVMazeBot. What do you want to do ?
+}
